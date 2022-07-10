@@ -296,6 +296,7 @@
         padding-bottom: 26px;
         margin-bottom: 26px;
         position: relative;
+        @extend %title-font;
         &::after {
             content: '';
             position: absolute;
@@ -323,6 +324,7 @@
         padding-bottom: 25px;
         margin-bottom: 24px;
         position: relative;
+        @extend %title-font;
         &::after {
             content: '';
             position: absolute;
@@ -380,6 +382,7 @@
         padding-bottom: 19px;
         margin-bottom: 19px;
         position: relative;
+        @extend %title-font;
         &::after {
             content: '';
             bottom: 0;
@@ -412,6 +415,7 @@
         padding-bottom: 22px;
         margin-bottom: 22px;
         position: relative;
+        @extend %title-font;
         &::after{
             content: '';
             position: absolute;
@@ -424,5 +428,78 @@
     }
     &__text{
         max-width: 540px;
+    }
+}
+
+.works-path {
+    padding: 80px 0 30px;
+    &__title {
+        @extend %title-font;
+        text-align: center;
+        color: $title;
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+    &__items-box {
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba($title, .7);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $title;
+        }
+    }
+    &__item {
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+    &__item--production {
+        margin-left: 317px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background-color: rgba($title, .7);
+        }
+    }
+    &__item--production,
+    &__item--consultation{
+        padding-bottom: 38px;
+    }
+    &__item--measuring {
+        padding-top: 38px;
+        margin-left: 305px;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background-color: rgba($title, .7);
+    }
+    }
+    &__item-title{
+        margin-left: 13px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__item-text {
+        margin-top: 13px;
     }
 }
