@@ -727,6 +727,10 @@
     }
 }
 
+.map {
+    margin-top: -50px;
+}
+
 .contact {
     padding-bottom: 100px;
     &__title{
@@ -813,5 +817,41 @@
         border-radius: 21px;
         padding: 6px 60px;
         cursor: pointer;
+    }
+}
+
+.contact-slider{
+    padding-bottom: 102px;
+    &__link {
+        position: relative;
+        margin-bottom: 20px;
+        &:hover {
+            .contact-slider__title {
+                opacity: 1;
+            }
+        }
+    }
+    &__img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(#fff,  .6);
+        color: $title;
+        @extend %title-font;
+        line-height: 22px;
+        padding: 0 5px;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
     }
 }
