@@ -8,10 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet"> 
 
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -37,7 +34,7 @@
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#">Blog</a>
+                  <a class="menu__list-link menu__list-link--active" href="#">Blog</a>
                 </li>
                 <li class="menu__list-item">
                   <a class="menu__list-link" href="#">Contact</a>
@@ -118,7 +115,7 @@
               <blockquote class="blog__blockquote">
                 “Simplicity is not the goal. It is the by-product of a good idea
                 and modest expectations”
-                <div class="blog__blockquote__author">Paul Rand</div>
+                <div class="blog__blockquote-author">Paul Rand</div>
               </blockquote>
 
               <div class="blog__item article-popup">
@@ -130,6 +127,7 @@
                   />
                   <a
                     class="blog__item-popup"
+                    data-fancybox
                     href="https://youtu.be/F0XXIMbxWPw"
                   >
                     <img
@@ -185,14 +183,24 @@
               </div>
 
               <div class="pagination">
-                <ul class="pagination__list">
-                  <li class="pagination__item">
-                    <a class="pagination__item-num pagination__item-num--active" href="#">1</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a class="pagination__item-num" href="#">2</a>
-                  </li>
-                </ul>
+        
+                  <a class="pagination__arrow pagination__arrow--disabled"  href="#">
+                    <img class="pagination__arrow-icon" src="images/arrow-left.svg" alt="arrow">
+                  </a>
+                  
+                  <ul class="pagination__list">
+                    <li class="pagination__list-item">
+                      <a class="pagination__list-num pagination__list-num--active" href="#">1</a>
+                    </li>
+                    <li class="pagination__list-item">
+                      <a class="pagination__list-num" href="#">2</a>
+                    </li>
+                  </ul>
+                    
+                    <a class="pagination__arrow"  href="#">
+                      <img class="pagination__arrow-icon" src="images/arrow-right.svg" alt="arrow">
+                    </a>
+              
               </div>
             </div>
 
